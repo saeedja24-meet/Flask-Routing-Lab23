@@ -27,8 +27,28 @@
             return color;
         }
     </script>
+    <style>
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            margin: 0 5px;
+        }
+    </style>
 </head>
 <body>
-     <div id="word-container"></div>
+    <div id="word-container"></div>
+    <div class="button-container">
+        <img src="https://eu-images.contentstack.com/v3/assets/bltbc1876152fcd9f07/bltd86945a04e67643a/63b6d4144e0ee9459cbdf641/dark_souls_prequel.png">
+        <button id="telescopes">telescopes</button>
+        <a href="/cart"><button id="darkSouls">darkSouls</button></a>
+        <button id="shoes">shoes</button>
+        <button id="phones">phones</button>
+    </div>
+    <script>
+        document.getElementById("darkSouls").onclick=location herf("cart.html");
+    </script>
 </body>
 </html>
