@@ -10,10 +10,12 @@ app = Flask(  # Create a flask app
 @app.route('/')
 def homeHtml():
     return render_template("home.html")
-
 @app.route('/cart')
 def car():
     return render_template("cart.html")
+@app.route('/product')
+def function():
+    return render_template("product.html")
 
-if __name__ == "__main__":  # Makes sure this is the main process
+if __name__ == "__main__":
     app.run(debug=True)

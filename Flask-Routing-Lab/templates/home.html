@@ -5,28 +5,7 @@
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js"></script>
     <title>JaStore</title>
-        <script>
-        window.addEventListener('DOMContentLoaded', (event) => {
-            const word = 'Hello'; // Replace with your desired word
-            const wordContainer = document.getElementById('word-container');
-
-            for (let i = 0; i < word.length; i++) {
-                const letterSpan = document.createElement('span');
-                letterSpan.textContent = word[i];
-                letterSpan.style.color = getRandomColor();
-                wordContainer.appendChild(letterSpan);
-            }
-        });
-
-        function getRandomColor() {
-            const letters = '0123456789ABCDEF';
-            let color = '#';
-            for (let i = 0; i < 6; i++) {
-                color += letters[Math.floor(Math.random() * 16)];
-            }
-            return color;
-        }
-    </script>
+    
     <style>
         .button-container {
             display: flex;
@@ -36,19 +15,23 @@
         .button-container button {
             margin: 0 5px;
         }
+        img {
+          border: 5px solid #ddd;
+          border-radius: 4px;
+          padding: 20px;
+          width: 400px;
+          height: 700px;
+        }
     </style>
 </head>
 <body>
-    <div id="word-container"></div>
-    <div class="button-container">
-        <img src="https://eu-images.contentstack.com/v3/assets/bltbc1876152fcd9f07/bltd86945a04e67643a/63b6d4144e0ee9459cbdf641/dark_souls_prequel.png">
-        <button id="telescopes">telescopes</button>
-        <a href="/cart"><button id="darkSouls">darkSouls</button></a>
-        <button id="shoes">shoes</button>
-        <button id="phones">phones</button>
+    <div id="word-container">
+        <div class="button-container">
+            <a href="/cart"><img id="telescope" src="https://wasserstein-home.com/cdn/shop/products/TelescopeUS_1.jpg?height=512&v=1655094178&width=512"/></a>
+            <a href="/cart"><img id="darkSouls" src="https://eu-images.contentstack.com/v3/assets/bltbc1876152fcd9f07/bltd86945a04e67643a/63b6d4144e0ee9459cbdf641/dark_souls_prequel.png"/></a>
+            <a href="/cart"><img id="shoes" src="https://reebok.co.il/cdn/shop/products/Club_C_85_Men_s_Shoes_White_AR0456_01_standard.jpg?v=1674638175"/></a>
+            <a href="/cart"><img id="phones" src="https://fdn.gsmarena.com/imgroot/reviews/22/blackview-bv8800/lifestyle/-1200w5/gsmarena_017.jpg/"></a>
+        </div>
     </div>
-    <script>
-        document.getElementById("darkSouls").onclick=location herf("cart.html");
-    </script>
 </body>
 </html>
