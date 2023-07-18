@@ -2,9 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+    <title>JaStore</title>
+        <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const word = 'Hello'; // Replace with your desired word
+            const wordContainer = document.getElementById('word-container');
+
+            for (let i = 0; i < word.length; i++) {
+                const letterSpan = document.createElement('span');
+                letterSpan.textContent = word[i];
+                letterSpan.style.color = getRandomColor();
+                wordContainer.appendChild(letterSpan);
+            }
+        });
+
+        function getRandomColor() {
+            const letters = '0123456789ABCDEF';
+            let color = '#';
+            for (let i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+    </script>
 </head>
 <body>
-
+     <div id="word-container"></div>
 </body>
 </html>
